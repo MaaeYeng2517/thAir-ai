@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="รวบรวม AI Tools, AI Models และทรัพยากร AI ที่ดีที่สุด อัปเดตล่าสุด ครบครัน ใช้งานง่าย" />
+  <title>AIverse — ศูนย์รวม AI Tools & Models</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated Background Particles -->
+  <div class="bg-particles" id="bgParticles"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">AI<span class="logo-accent">verse</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#tools" class="nav-link">🛠️ Tools</a>
+        <a href="#models" class="nav-link">🧠 Models</a>
+        <a href="#categories" class="nav-link">📂 หมวดหมู่</a>
+        <a href="#trending" class="nav-link">🔥 Trending</a>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-submit" id="submitBtn">+ ส่ง Tool</button>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#tools" class="mobile-nav-link">🛠️ AI Tools</a>
+    <a href="#models" class="mobile-nav-link">🧠 AI Models</a>
+    <a href="#categories" class="mobile-nav-link">📂 หมวดหมู่</a>
+    <a href="#trending" class="mobile-nav-link">🔥 Trending</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg-image"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🚀 อัปเดตล่าสุด พฤศจิกายน 2026</div>
+      <h1 class="hero-title">
+        ค้นพบ <span class="gradient-text">AI Tools</span><br/>
+        ที่ดีที่สุดในโลก
+      </h1>
+      <p class="hero-subtitle">
+        รวบรวม AI Tools, AI Models และทรัพยากรด้าน AI กว่า <strong>500+</strong> รายการ<br/>
+        ค้นหา กรอง และเปรียบเทียบได้ในที่เดียว
+      </p>
+      <div class="hero-search">
+        <div class="search-wrapper">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            id="heroSearch"
+            class="search-input"
+            placeholder="ค้นหา AI Tool เช่น ChatGPT, Midjourney, Claude..."
+            autocomplete="off"
+          />
+          <button class="search-clear" id="searchClear">✕</button>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="500">0</span>
+          <span class="stat-label">AI Tools</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="120">0</span>
+          <span class="stat-label">AI Models</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="24">0</span>
+          <span class="stat-label">หมวดหมู่</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="98">0</span>
+          <span class="stat-label">% ฟรี</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- Category Filter Bar -->
+  <section class="category-bar" id="categories">
+    <div class="container">
+      <div class="category-scroll" id="categoryScroll">
+        <button class="cat-btn active" data-cat="all">✨ ทั้งหมด</button>
+        <button class="cat-btn" data-cat="chatbot">💬 Chatbot & LLM</button>
+        <button class="cat-btn" data-cat="image">🎨 Image Generation</button>
+        <button class="cat-btn" data-cat="video">🎬 Video AI</button>
+        <button class="cat-btn" data-cat="audio">🎵 Audio & Music</button>
+        <button class="cat-btn" data-cat="code">👨‍💻 Coding AI</button>
+        <button class="cat-btn" data-cat="writing">✍️ Writing AI</button>
+        <button class="cat-btn" data-cat="search">🔎 AI Search</button>
+        <button class="cat-btn" data-cat="productivity">⚡ Productivity</button>
+        <button class="cat-btn" data-cat="design">🎭 Design AI</button>
+        <button class="cat-btn" data-cat="data">📊 Data & Analytics</button>
+        <button class="cat-btn" data-cat="model">🧠 Foundation Models</button>
+        <button class="cat-btn" data-cat="avatar">🤖 AI Avatar</button>
+        <button class="cat-btn" data-cat="voice">🗣️ Voice AI</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trending Section -->
+  <section class="section trending-section" id="trending">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">🔥 HOT</div>
+        <h2 class="section-title">กำลังเป็นที่นิยม</h2>
+        <p class="section-subtitle">AI Tools ที่ถูกใช้งานมากที่สุดในขณะนี้</p>
+      </div>
+      <div class="trending-grid" id="trendingGrid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Tools Grid -->
+  <section class="section tools-section" id="tools">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">🛠️ TOOLS</div>
+        <h2 class="section-title">AI Tools ทั้งหมด</h2>
+        <p class="section-subtitle">ครบครันทุกหมวดหมู่ ค้นหาและกรองได้ตามต้องการ</p>
+      </div>
+      <div class="tools-controls">
+        <div class="results-count" id="resultsCount">แสดง <strong>0</strong> รายการ</div>
+        <div class="sort-wrapper">
+          <label class="sort-label">เรียงโดย:</label>
+          <select class="sort-select" id="sortSelect">
+            <option value="popular">ยอดนิยม</option>
+            <option value="newest">ล่าสุด</option>
+            <option value="name">ชื่อ A-Z</option>
+            <option value="free">ฟรีก่อน</option>
+          </select>
+        </div>
+      </div>
+      <div class="tools-grid" id="toolsGrid">
+        <!-- Injected by JS -->
+      </div>
+      <div class="no-results" id="noResults" style="display:none;">
+        <div class="no-results-icon">🤖</div>
+        <h3>ไม่พบผลลัพธ์</h3>
+        <p>ลองค้นหาด้วยคำอื่น หรือเลือกหมวดหมู่อื่น</p>
+      </div>
+      <div class="load-more-wrapper" id="loadMoreWrapper">
+        <button class="btn-load-more" id="loadMoreBtn">โหลดเพิ่มเติม ↓</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Models Section -->
+  <section class="section models-section" id="models">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">🧠 MODELS</div>
+        <h2 class="section-title">Foundation AI Models</h2>
+        <p class="section-subtitle">โมเดล AI ชั้นนำที่ขับเคลื่อนเทคโนโลยีแห่งอนาคต</p>
+      </div>
+      <div class="models-grid" id="modelsGrid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section class="section resources-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge">📚 RESOURCES</div>
+        <h2 class="section-title">แหล่งเรียนรู้ AI</h2>
+        <p class="section-subtitle">คอร์สเรียน บทความ และชุมชน AI ที่ดีที่สุด</p>
+      </div>
+      <div class="resources-grid" id="resourcesGrid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Banner -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-card">
+        <div class="newsletter-content">
+          <div class="newsletter-icon">📬</div>
+          <div class="newsletter-text">
+            <h3>รับข่าวสาร AI ล่าสุด</h3>
+            <p>อัปเดต AI Tools ใหม่ทุกสัปดาห์ ตรงถึง Inbox ของคุณ</p>
+          </div>
+        </div>
+        <div class="newsletter-form">
+          <input type="email" id="emailInput" class="newsletter-input" placeholder="กรอก Email ของคุณ..." />
+          <button class="btn-subscribe" id="subscribeBtn">สมัครรับข่าวสาร 🚀</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-icon">⬡</span>
+            <span>AI<span class="logo-accent">verse</span></span>
+          </div>
+          <p class="footer-desc">ศูนย์รวม AI Tools และ Models ที่ครบครันที่สุดสำหรับคนไทย</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn">𝕏</a>
+            <a href="#" class="social-btn">in</a>
+            <a href="#" class="social-btn">▶</a>
+            <a href="#" class="social-btn">📘</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>หมวดหมู่</h4>
+          <ul>
+            <li><a href="#">Chatbot & LLM</a></li>
+            <li><a href="#">Image Generation</a></li>
+            <li><a href="#">Video AI</a></li>
+            <li><a href="#">Coding AI</a></li>
+            <li><a href="#">Writing AI</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>เกี่ยวกับ</h4>
+          <ul>
+            <li><a href="#">เกี่ยวกับเรา</a></li>
+            <li><a href="#">ส่ง Tool ใหม่</a></li>
+            <li><a href="#">ติดต่อเรา</a></li>
+            <li><a href="#">นโยบายความเป็นส่วนตัว</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>ทรัพยากร</h4>
+          <ul>
+            <li><a href="#">บล็อก</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">API Docs</a></li>
+            <li><a href="#">Changelog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 AIverse · สงวนลิขสิทธิ์ · สร้างด้วย ❤️ สำหรับชุมชน AI ไทย</p>
+        <p class="footer-update">อัปเดตล่าสุด: พฤศจิกายน 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Submit Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <h3 class="modal-title">ส่ง AI Tool ใหม่ 🚀</h3>
+      <p class="modal-subtitle">แนะนำ AI Tool ที่คุณชื่นชอบให้ชุมชนได้รู้จัก</p>
+      <div class="modal-form">
+        <div class="form-group">
+          <label>ชื่อ Tool *</label>
+          <input type="text" class="form-input" placeholder="เช่น MyAI Tool" />
+        </div>
+        <div class="form-group">
+          <label>URL *</label>
+          <input type="url" class="form-input" placeholder="https://..." />
+        </div>
+        <div class="form-group">
+          <label>หมวดหมู่ *</label>
+          <select class="form-input">
+            <option>เลือกหมวดหมู่...</option>
+            <option>Chatbot & LLM</option>
+            <option>Image Generation</option>
+            <option>Video AI</option>
+            <option>Audio & Music</option>
+            <option>Coding AI</option>
+            <option>Writing AI</option>
+            <option>Productivity</option>
+            <option>Design AI</option>
+            <option>อื่นๆ</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>คำอธิบาย</label>
+          <textarea class="form-input form-textarea" placeholder="อธิบาย AI Tool นี้สั้นๆ..."></textarea>
+        </div>
+        <button class="btn-submit-form">ส่งข้อมูล 🚀</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
